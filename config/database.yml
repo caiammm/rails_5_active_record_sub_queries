@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['DB_USER']  %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: rails_5_active_record_sub_queries_development
+
+test:
+  <<: *default
+  database: rails_5_active_record_sub_queries_test
+
+production:
+  <<: *default
+  database: rails_5_active_record_sub_queries_production
+  username: rails_5_active_record_sub_queries
+  password: <%= ENV['RAILS_5_ACTIVE_RECORD_SUB_QUERIES_DATABASE_PASSWORD'] %>
