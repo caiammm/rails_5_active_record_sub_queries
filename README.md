@@ -19,6 +19,7 @@ IN (
 => ORDER BY article_id, article.created_at DESC
 )
 ```
+```
 puts Comment.where(article_id: [1,2]).latest_by_article_with_unscoped.to_sql
 ```
 ```
