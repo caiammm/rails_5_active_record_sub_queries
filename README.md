@@ -6,6 +6,7 @@ Please compare the queries bellow
 ```
 rails c
 ```
+```
 puts Comment.where(article_id: [1,2]).latest_by_article.to_sql
 ```
 ```
