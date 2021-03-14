@@ -1,8 +1,10 @@
 # README
 
 It is to show a possible issue in rails 5.2.
-Please compare the queries bellow
+Please compare the queries bellow\
+
 1 - download the project
+
 2 - run these commands (setup)
 ```
 $ bundle install
